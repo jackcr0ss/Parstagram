@@ -22,13 +22,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
-        
-        
-    }
-    
-    
-    
-    @IBAction func onSubmitButton(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = true
@@ -38,6 +31,15 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         } else {
             picker.sourceType = .photoLibrary
         }
+        
+        present(picker, animated: true, completion: nil)
+        
+    }
+    
+    
+    
+    @IBAction func onSubmitButton(_ sender: Any) {
+    
         
     }
     
