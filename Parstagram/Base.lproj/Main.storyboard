@@ -92,11 +92,32 @@
                         <viewLayoutGuide key="safeArea" id="lAz-rd-P70"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="u7o-Fh-X7N"/>
+                    <navigationItem key="navigationItem" id="u7o-Fh-X7N">
+                        <barButtonItem key="rightBarButtonItem" title="+" image="insta_camera_btn" id="8od-6i-2oH">
+                            <connections>
+                                <segue destination="OGF-nP-ziM" kind="presentation" id="FP4-NI-cgb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JSo-Rt-Ovq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1647.826086956522" y="93.75"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="u0F-YI-bL2">
+            <objects>
+                <viewController id="OGF-nP-ziM" customClass="CameraViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cNK-4J-tun">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bbk-4k-4EP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GYV-Bj-bs3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="94"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ovY-3l-uTD">
@@ -118,6 +139,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
