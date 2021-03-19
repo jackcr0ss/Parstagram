@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentField: UITextField!
@@ -29,7 +29,15 @@ class CameraViewController: UIViewController {
     
     
     @IBAction func onSubmitButton(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
         
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            picker.sourceType = .camera
+        } else {
+            picker.sourceType = .photoLibrary
+        }
         
     }
     
