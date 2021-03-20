@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0760AEEB260668B5005773D1 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0760AEEA260668B5005773D1 /* PostCell.swift */; };
 		07615BFD2604EC0800E05D6D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07615BFC2604EC0800E05D6D /* LoginViewController.swift */; };
 		07615C022604EC2500E05D6D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07615C012604EC2500E05D6D /* FeedViewController.swift */; };
 		07631F1526051AA000F6AF08 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07631F1426051AA000F6AF08 /* CameraViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0760AEEA260668B5005773D1 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		07615BFC2604EC0800E05D6D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07615C012604EC2500E05D6D /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		07631F1426051AA000F6AF08 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				07615BFC2604EC0800E05D6D /* LoginViewController.swift */,
 				07615C012604EC2500E05D6D /* FeedViewController.swift */,
 				07631F1426051AA000F6AF08 /* CameraViewController.swift */,
+				0760AEEA260668B5005773D1 /* PostCell.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				07EC6CFA2603EC2F00950666 /* AppDelegate.swift in Sources */,
 				07615C022604EC2500E05D6D /* FeedViewController.swift in Sources */,
 				07EC6CFC2603EC2F00950666 /* SceneDelegate.swift in Sources */,
+				0760AEEB260668B5005773D1 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
