@@ -169,6 +169,10 @@
                                                 <constraint firstItem="rum-op-oVO" firstAttribute="top" secondItem="bkA-Jj-Vad" secondAttribute="topMargin" constant="8" id="qCF-bj-gLY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="CHm-CY-rEa" id="ufH-61-MF5"/>
+                                            <outlet property="nameLabel" destination="rum-op-oVO" id="v9Y-Pe-TbK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
