@@ -14,6 +14,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     let commentBar = MessageInputBar()
     
+    var showCommentBar = false
     
     var posts = [PFObject]()
     
@@ -24,6 +25,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.delegate = self
         tableView.dataSource = self
 
+        
+        tableView.keyboardDismissMode = .interactive
         // Do any additional setup after loading the view.
     }
     
@@ -32,7 +35,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override var canBecomeFirstResponder: Bool {
-        return true 
+        return showCommentBar
     }
     
     override func viewDidAppear(_ animated: Bool) {
