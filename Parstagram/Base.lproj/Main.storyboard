@@ -139,6 +139,37 @@
                                             <outlet property="usernameLabel" destination="FTU-NA-z9T" id="4gO-XZ-DEl"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="dUi-0b-h5T">
+                                        <rect key="frame" x="0.0" y="555" width="414" height="59"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dUi-0b-h5T" id="bkA-Jj-Vad">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rum-op-oVO">
+                                                    <rect key="frame" x="36" y="19" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHm-CY-rEa">
+                                                    <rect key="frame" x="86" y="19" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rum-op-oVO" firstAttribute="leading" secondItem="bkA-Jj-Vad" secondAttribute="leadingMargin" constant="16" id="0HA-DS-mTe"/>
+                                                <constraint firstItem="CHm-CY-rEa" firstAttribute="top" secondItem="bkA-Jj-Vad" secondAttribute="topMargin" constant="8" id="9H1-jA-Vl7"/>
+                                                <constraint firstItem="CHm-CY-rEa" firstAttribute="leading" secondItem="rum-op-oVO" secondAttribute="trailing" constant="8" id="V73-at-cn6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CHm-CY-rEa" secondAttribute="trailing" constant="8" id="ZUD-rw-FAs"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rum-op-oVO" secondAttribute="bottom" constant="8" id="gWU-EH-fir"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="CHm-CY-rEa" secondAttribute="bottom" constant="8" id="mcb-Nw-3Jg"/>
+                                                <constraint firstItem="rum-op-oVO" firstAttribute="top" secondItem="bkA-Jj-Vad" secondAttribute="topMargin" constant="8" id="qCF-bj-gLY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
