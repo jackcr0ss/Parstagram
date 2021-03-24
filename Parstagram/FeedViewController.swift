@@ -99,6 +99,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             
             return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddCommentCell")!
+            
+            return cell
         }
     }
     
