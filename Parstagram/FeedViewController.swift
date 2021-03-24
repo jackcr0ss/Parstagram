@@ -27,7 +27,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 
         
         tableView.keyboardDismissMode = .interactive
-        // Do any additional setup after loading the view.
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardWillBeHidden(note:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillBeHidden(note: Notification) {
+        
     }
     
     override var inputAccessoryView: UIView? {
@@ -108,8 +114,17 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.row]
+        let comments = (post["comments"] as? [PFObject]) ?? []
         
-        let comment = PFObject(className: "Comments")
+        if  indexPath.row == comments.count + 1 {
+            showCommentBar = true
+            becomeFirstResponder()
+            commentBar.inputTextView.becomeFirstResponder()
+            
+        }
+        
+        
+        /*
         comment["text"] = "This is a random comment"
         comment["post"] = post
         comment["author"] = PFUser.current()!
@@ -123,7 +138,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 print("Error saving comment")
             }
         }
-        
+        */
     }
     /*
     // MARK: - Navigation
