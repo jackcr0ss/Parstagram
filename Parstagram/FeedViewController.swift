@@ -9,7 +9,7 @@ import UIKit
 import Parse
 import MessageInputBar
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate{
 
     @IBOutlet weak var tableView: UITableView!
     let commentBar = MessageInputBar()
@@ -22,6 +22,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        commentBar.inputTextView.placeholder = "Add a comment..."
+        commentBar.sendButton.title = "Post"
+        commentBar.delegate = self
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
 
@@ -33,7 +38,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @objc func keyboardWillBeHidden(note: Notification) {
-        
+        commentBar.inputTextView.text = nil
+        showCommentBar = false
+        becomeFirstResponder()
     }
     
     override var inputAccessoryView: UIView? {
@@ -58,6 +65,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
         
+    }
+    
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        //add comment
+        
+        commentBar.inputTextView.text = nil
+        showCommentBar = false
+        becomeFirstResponder()
+        commentBar.inputTextView.resignFirstResponder()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
