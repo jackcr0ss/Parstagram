@@ -58,7 +58,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let post = posts[section]
         let comments = (post["comments"] as? [PFObject]) ?? []
-        return comments.count + 1
+        return comments.count + 2
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -88,7 +88,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
             
             return cell
             
-        } else {
+        } else if indexPath.row <= comments.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
             
             let comment = comments[indexPath.row - 1]
